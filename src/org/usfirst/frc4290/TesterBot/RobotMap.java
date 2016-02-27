@@ -41,7 +41,7 @@ public class RobotMap {
     //public static Relay rollerSubroller;
     public static VictorSP rollerVictor;
     public static DoubleSolenoid pneumaticsleftSolonoid;
-    public static DoubleSolenoid pneumaticsrightSolonoid;
+    public static DoubleSolenoid pneumaticsClimberSolonoid;
     public static Relay spike;
     public static Compressor pneumaticscompressor;
 
@@ -99,8 +99,8 @@ public class RobotMap {
         pneumaticsleftSolonoid = new DoubleSolenoid(0, 0, 1);
         LiveWindow.addActuator("Pneumatics", "leftSolonoid", pneumaticsleftSolonoid);
         
-//        pneumaticsrightSolonoid = new DoubleSolenoid(1, 2, 3);
-//        LiveWindow.addActuator("Pneumatics", "rightSolonoid", pneumaticsrightSolonoid);
+        pneumaticsClimberSolonoid = new DoubleSolenoid(1, 2, 3);
+//        LiveWindow.addActuator("Pneumatics", "climbSolonoid", pneumaticsrightSolonoid);
 //        
         pneumaticscompressor = new Compressor(0);
         
