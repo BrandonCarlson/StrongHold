@@ -89,11 +89,11 @@ public class Robot extends IterativeRobot {
 
     public void autonomousInit() {
         // schedule the autonomous command (example)
-//    	AutoDefense .55
-//    	Rough 1 or .85
+//    	AutoDefense .65
+//    	Rough .75
 //    	Threshold .55
         if (autonomousCommand != null) {
-        	Robot.driveTrain.speedMultiplier = 0.55;
+        	Robot.driveTrain.speedMultiplier = 0.65;
         	autonomousCommand.start();
         }
     }
