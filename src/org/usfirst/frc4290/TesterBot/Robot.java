@@ -72,6 +72,7 @@ public class Robot extends IterativeRobot {
         autoChooser.addObject("Rough Terrain",new AutoRoughTerrain());
         autoChooser.addObject("Threshold",new AutoThreshold());
         autoChooser.addObject("Ramp", new AutoRamp());
+        autoChooser.addObject("Chival De Frise", new AutoChivalDeFrise());
         SmartDashboard.putData("Auto Options", autoChooser);
 //        autonomousCommand = new CommandGroup1();
 //        autonomousCommand = new AutoDefensePosition1();
@@ -114,12 +115,16 @@ public class Robot extends IterativeRobot {
     	else if (autoChooser.getSelected().toString().equals("AutoRamp")){
     		Robot.driveTrain.speedMultiplier = 0.90;
     	}
+    	else if(autoChooser.getSelected().toString().equals("Chival De Frise")){
+    		Robot.driveTrain.speedMultiplier = 0.65;
+    	}
     	else{
         	Robot.driveTrain.speedMultiplier = 0.55;
     	}
     	SmartDashboard.putString("Chooser", autoChooser.getSelected().toString());
         	autonomousCommand.start();
-//        }
+        	
+        	
     }
 
     /**
