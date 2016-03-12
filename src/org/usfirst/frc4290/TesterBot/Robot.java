@@ -45,6 +45,7 @@ public class Robot extends IterativeRobot {
     
     public static CameraServer camera;
     SendableChooser autoChooser;
+    public static SendableChooser autoChooserTwo;
     
     /**
      * This function is run when the robot is first started up and should be
@@ -74,6 +75,13 @@ public class Robot extends IterativeRobot {
         autoChooser.addObject("Ramp", new AutoRamp());
         autoChooser.addObject("Chival De Frise", new AutoChivalDeFrise());
         SmartDashboard.putData("Auto Options", autoChooser);
+        
+        
+        autoChooserTwo = new SendableChooser();
+        autoChooserTwo.addDefault("None", null);
+        autoChooserTwo.addObject("Score",new AutoScore());
+        autoChooserTwo.addObject("Return",new AutoReturn());
+        SmartDashboard.putData("Auto Options", autoChooserTwo);
 //        autonomousCommand = new CommandGroup1();
 //        autonomousCommand = new AutoDefensePosition1();
 //        autonomousCommand = new AutoRoughTerrain();

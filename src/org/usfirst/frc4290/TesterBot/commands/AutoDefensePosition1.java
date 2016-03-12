@@ -47,6 +47,7 @@ public class AutoDefensePosition1 extends CommandGroup {
 
     	addSequential(new AutoLowerArm(), 1.0);
         addSequential(new MoveForward(0.0), 3);
+        addSequential(new AutoTwo());
 //        addParallel(new AutoLowerArm(), 2);
 //        addSequential(new RightTurn(0.0), 0.08);
 //        addSequential(new MoveForward(0.0), 3);
