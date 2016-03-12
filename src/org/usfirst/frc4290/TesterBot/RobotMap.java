@@ -76,7 +76,7 @@ public class RobotMap {
         driveTraindriveRightTwoMotor = new Talon(3);
         LiveWindow.addActuator("DriveTrain", "driveRightTwoMotor", (Talon) driveTraindriveRightTwoMotor);
         
-        driveTraindriveLeftOneMotor = new Talon(0);
+        driveTraindriveLeftOneMotor = new Talon(4);
         LiveWindow.addActuator("DriveTrain", "driveLeftOneMotor", (Talon) driveTraindriveLeftOneMotor);
         
         driveTraindriveLeftTwoMotor = new Talon(1);
