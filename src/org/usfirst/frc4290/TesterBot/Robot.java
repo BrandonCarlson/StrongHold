@@ -81,6 +81,7 @@ public class Robot extends IterativeRobot {
         autoChooserTwo.addDefault("None", null);
         autoChooserTwo.addObject("Score",new AutoScore());
         autoChooserTwo.addObject("Return",new AutoReturn());
+        autoChooserTwo.addObject("Turn and Return",new AutoTurnReturn());
         SmartDashboard.putData("Auto Options", autoChooserTwo);
 //        autonomousCommand = new CommandGroup1();
 //        autonomousCommand = new AutoDefensePosition1();

@@ -61,6 +61,10 @@ public class AutoTwo extends Command {
     		Robot.driveTrain.speedMultiplier = 0.75;
     		new AutoScore().start();
     	}
+    	else if(Robot.autoChooserTwo.getSelected().toString().equals("AutoTurnReturn")){
+    		Robot.driveTrain.speedMultiplier = 0.65;
+    		new AutoTurnReturn().start();
+    	}
     }
 
     // Called when another command which requires one or more of the same
