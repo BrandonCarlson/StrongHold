@@ -115,13 +115,16 @@ public class DriveTrain extends Subsystem {
     }
     
     public void driveBackwards(){
-    	robotDrive4.tankDrive(-speedMultiplier, -speedMultiplier);
+    	robotDrive4.tankDrive(-speedMultiplier, -speedMultiplier*1.07);
     }
     public void driveRightTurn(){
     	robotDrive4.tankDrive(1, -1);
     }
     public void driveLeftTurn(){
     	robotDrive4.tankDrive(-1, 1);
+    }
+    public void driveSlowRightTurn(){
+    	robotDrive4.tankDrive(0.8, -0.8);
     }
     
     public void takeJoystickInputs(Joystick left, Joystick right){

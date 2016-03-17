@@ -82,7 +82,7 @@ public class Robot extends IterativeRobot {
         autoChooserTwo.addObject("Score",new AutoScore());
         autoChooserTwo.addObject("Return",new AutoReturn());
         autoChooserTwo.addObject("Turn and Return",new AutoTurnReturn());
-        SmartDashboard.putData("Auto Options", autoChooserTwo);
+        SmartDashboard.putData("Auto Options Two", autoChooserTwo);
 //        autonomousCommand = new CommandGroup1();
 //        autonomousCommand = new AutoDefensePosition1();
 //        autonomousCommand = new AutoRoughTerrain();
@@ -124,7 +124,7 @@ public class Robot extends IterativeRobot {
     	else if (autoChooser.getSelected().toString().equals("AutoRamp")){
     		Robot.driveTrain.speedMultiplier = 0.90;
     	}
-    	else if(autoChooser.getSelected().toString().equals("Chival De Frise")){
+    	else if(autoChooser.getSelected().toString().equals("AutoChivalDeFrise")){
     		Robot.driveTrain.speedMultiplier = 0.65;
     	}
     	else{

@@ -25,9 +25,12 @@ public class AutoTurnReturn extends CommandGroup {
         // a CommandGroup containing them would require both the chassis and the
         // arm.
     	
+    	addParallel(new AutoLowerArm(), 1);
+    	addSequential(new GrabBall(0.0), 1);
+    	addSequential(new AutoRaiseArm(), .5);
+    	addSequential(new RightTurn(0.0), 1.08);
+    	addSequential(new AutoLowerArm(), 1);
     	addParallel(new AutoLowerArm(), 5);
-    	addSequential(new ThrowBall(0.0), 1);
-    	addSequential(new RightTurn(0.0), 0.18);
     	addSequential(new MoveForward(0.0), 3);
     	addSequential(new GrabBall(0.0), 0.5);
     }
