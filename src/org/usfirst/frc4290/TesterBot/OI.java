@@ -89,9 +89,9 @@ public class OI {
         
         joystickLeft = new Joystick(0);
         
-        rollerThrow = new JoystickButton(joystickLeft, 2);
+        rollerThrow = new JoystickButton(joystickLeft, 3);
         rollerThrow.whileHeld(new ThrowBall(0.0));
-        rollerGrab = new JoystickButton(joystickLeft, 3);
+        rollerGrab = new JoystickButton(joystickLeft, 2);
         rollerGrab.whileHeld(new GrabBall(0.0));
         moveBackwardButton = new JoystickButton(joystickLeft, 32);
         moveBackwardButton.whileHeld(new MoveBackward(0.0));

@@ -126,6 +126,9 @@ public class DriveTrain extends Subsystem {
     public void driveSlowRightTurn(){
     	robotDrive4.tankDrive(0.8, -0.8);
     }
+    public void driveSlowLeftTurn(){
+    	robotDrive4.tankDrive(-0.8, 0.8);
+    }
     
     public void takeJoystickInputs(Joystick left, Joystick right){
     	SmartDashboard.getNumber("Multiplier", speedMultiplier);

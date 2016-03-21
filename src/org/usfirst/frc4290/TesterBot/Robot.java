@@ -74,12 +74,14 @@ public class Robot extends IterativeRobot {
         autoChooser.addObject("Threshold",new AutoThreshold());
         autoChooser.addObject("Ramp", new AutoRamp());
         autoChooser.addObject("Chival De Frise", new AutoChivalDeFrise());
+        autoChooser.addObject("Portcullis", new AutoPortcullis());
         SmartDashboard.putData("Auto Options", autoChooser);
         
         
         autoChooserTwo = new SendableChooser();
-        autoChooserTwo.addDefault("None", null);
-        autoChooserTwo.addObject("Score",new AutoScore());
+        autoChooserTwo.addDefault("None","");
+        autoChooserTwo.addObject("Score Left",new AutoScore());
+        autoChooserTwo.addObject("Score Right", new AutoScoreRight());
         autoChooserTwo.addObject("Return",new AutoReturn());
         autoChooserTwo.addObject("Turn and Return",new AutoTurnReturn());
         SmartDashboard.putData("Auto Options Two", autoChooserTwo);
@@ -127,6 +129,9 @@ public class Robot extends IterativeRobot {
     	else if(autoChooser.getSelected().toString().equals("AutoChivalDeFrise")){
     		Robot.driveTrain.speedMultiplier = 0.65;
     	}
+    	else if(autoChooser.getSelected().toString().equals("AutoPortcullis")){
+    		Robot.driveTrain.speedMultiplier = 0.55;
+    	}
     	else{
         	Robot.driveTrain.speedMultiplier = 0.55;
     	}
@@ -149,7 +154,7 @@ public class Robot extends IterativeRobot {
         // continue until interrupted by another command, remove
         // this line or comment it out.
         if (autonomousCommand != null) autonomousCommand.cancel();
-        Robot.driveTrain.speedMultiplier = 0.75;
+        Robot.driveTrain.speedMultiplier = 1;
     }
 
     /**
