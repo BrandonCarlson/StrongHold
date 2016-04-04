@@ -81,11 +81,11 @@ public class OI {
         midSpeedButton = new JoystickButton(joystickRight, 3);
         midSpeedButton.whenPressed(new MidSpeed());
         raiseClimber = new JoystickButton(joystickRight, 9);
-        raiseClimber.whenPressed(new RaiseClimber());
+        raiseClimber.whileHeld(new RaiseClimber());
         lowerClimber = new JoystickButton(joystickRight, 8);
-        lowerClimber.whenPressed(new LowerClimber());
-        lowerClimber.whenReleased(new StopClimber());
-        raiseClimber.whenReleased(new StopClimber());
+        lowerClimber.whileHeld(new LowerClimber());
+//        lowerClimber.whenReleased(new StopClimber());
+//        raiseClimber.whenReleased(new StopClimber());
         turnAround = new JoystickButton(joystickRight, 7);
         turnAround.whenPressed(new TurnAround());
         
