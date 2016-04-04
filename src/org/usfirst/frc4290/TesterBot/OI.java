@@ -84,6 +84,8 @@ public class OI {
         raiseClimber.whenPressed(new RaiseClimber());
         lowerClimber = new JoystickButton(joystickRight, 8);
         lowerClimber.whenPressed(new LowerClimber());
+        lowerClimber.whenReleased(new StopClimber());
+        raiseClimber.whenReleased(new StopClimber());
         turnAround = new JoystickButton(joystickRight, 7);
         turnAround.whenPressed(new TurnAround());
         
