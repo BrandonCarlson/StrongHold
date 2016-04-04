@@ -26,7 +26,7 @@ public class AutoTurnReturn extends CommandGroup {
         // arm.
     	
     	addParallel(new AutoLowerArm(), 1);
-    	addSequential(new GrabBall(0.0), 1);
+    	addSequential(new ThrowBall(0.0), 1);
     	addSequential(new AutoRaiseArm(), .5);
     	addSequential(new RightTurn(0.0), 1.08);
     	addSequential(new AutoLowerArm(), 1);
