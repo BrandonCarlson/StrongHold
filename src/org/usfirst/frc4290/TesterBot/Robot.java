@@ -74,9 +74,10 @@ public class Robot extends IterativeRobot {
         autoChooser.addObject("Low Bar",new AutoDefensePosition1());
         autoChooser.addObject("Rough Terrain",new AutoRoughTerrain());
         autoChooser.addObject("Threshold",new AutoThreshold());
-        autoChooser.addObject("Ramp", new AutoRamp());
+        autoChooser.addObject("Fly", new AutoRamp());
         autoChooser.addObject("Chival De Frise", new AutoChivalDeFrise());
         autoChooser.addObject("Portcullis", new AutoPortcullis());
+        autoChooser.addObject("Ramparts",new AutoRamparts());
         SmartDashboard.putData("Auto Options", autoChooser);
         
         
@@ -133,6 +134,9 @@ public class Robot extends IterativeRobot {
     	}
     	else if(autoChooser.getSelected().toString().equals("AutoPortcullis")){
     		Robot.driveTrain.speedMultiplier = 0.55;
+    	}
+    	else if(autoChooser.getSelected().toString().equals("AutoRamparts")){
+    		Robot.driveTrain.speedMultiplier = 1;
     	}
     	else{
         	Robot.driveTrain.speedMultiplier = 0.55;
