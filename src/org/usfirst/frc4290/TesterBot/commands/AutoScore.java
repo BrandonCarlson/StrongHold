@@ -46,10 +46,10 @@ public class AutoScore extends CommandGroup {
     	
 //    	addParallel(new AutoLowerArm(), 3);
     	addSequential(new AutoRaiseArm(), 1);
-    	addSequential(new SlowRightTurn(), 0.2);
+//    	addSequential(new SlowRightTurn(), 0.2);
     	addSequential(new MoveForward(0.0), 1.3);
 //    	addSequential(new AutoRaiseArm(), 0.5);
-    	addSequential(new SlowRightTurn(), 0.45);
+    	addSequential(new SlowRightTurn(60.0), 0.85);
     	addParallel(new AutoLowerArm(), 10);
     	addSequential(new MoveForward(0.0), 2.5);
     	addSequential(new ThrowBall(0.0), 5);

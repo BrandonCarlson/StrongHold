@@ -8,10 +8,11 @@ import edu.wpi.first.wpilibj.command.Command;
  *
  */
 public class SlowLeftTurn extends Command {
-
-    public SlowLeftTurn() {
+	private double turnAngle = 0;
+    public SlowLeftTurn(double angle) {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+    	turnAngle = angle;
     	requires(Robot.driveTrain);
     }
 
@@ -21,7 +22,10 @@ public class SlowLeftTurn extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveTrain.driveSlowLeftTurn();
+    	double gyroAngle = (Robot.gyroSub.getGyroAngle() - 360) * -1;
+    	if (gyroAngle < turnAngle || gyroAngle > 300){
+    		Robot.driveTrain.driveSlowLeftTurn();
+    	}
     }
 
     // Make this return true when this Command no longer needs to run execute()
