@@ -140,10 +140,10 @@ public class DriveTrain extends Subsystem {
     	robotDrive4.arcadeDrive(Math.pow(right.getY(), powerCurve)*speedMultiplier*-1, right.getX()*-.85);//.arcadeDrive(right);
     }
     public void swingRight() {
-    	robotDrive4.tankDrive(1, 0);
+    	robotDrive4.tankDrive(0.85, 0.55);
     }
     public void swingLeft() {
-    	robotDrive4.tankDrive(0, 1);
+    	robotDrive4.tankDrive(0.55, 0.85);
     }
     public void moveForward(){
     	robotDrive4.tankDrive(0.7, 0.7);

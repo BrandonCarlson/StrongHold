@@ -136,7 +136,7 @@ public class Robot extends IterativeRobot {
     		Robot.driveTrain.speedMultiplier = 0.55;
     	}
     	else if(autoChooser.getSelected().toString().equals("AutoRamparts")){
-    		Robot.driveTrain.speedMultiplier = 1;
+    		Robot.driveTrain.speedMultiplier = 0.65;
     	}
     	else{
         	Robot.driveTrain.speedMultiplier = 0.55;
