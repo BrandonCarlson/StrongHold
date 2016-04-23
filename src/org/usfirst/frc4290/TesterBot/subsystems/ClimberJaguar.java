@@ -58,8 +58,8 @@ public class ClimberJaguar extends Subsystem {
     	climberJaguarTwo.set(1);
     }
     public void climbDown(){
-    	climberJaguar.set(1);
-    	climberJaguarTwo.set(1);
+    	climberJaguar.set(-1);
+    	climberJaguarTwo.set(-1);
     }
     public void climbStop(){
     	climberJaguar.set(0);

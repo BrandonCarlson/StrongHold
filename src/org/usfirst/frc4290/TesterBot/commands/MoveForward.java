@@ -43,7 +43,7 @@ public class MoveForward extends Command {
 
     // Called just before this Command runs the first time
     protected void initialize() {
-    	
+    	Robot.gyroSub.resetGyro();
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -52,7 +52,9 @@ public class MoveForward extends Command {
     		setTimeout(timeOut);
     	}
     	
-    	Robot.driveTrain.driveForward();
+    	double gyroAngle = Robot.gyroSub.getGyroAngle() - 180.0;
+
+    	Robot.driveTrain.driveForward(gyroAngle);
     }
 
     // Make this return true when this Command no longer needs to run execute()

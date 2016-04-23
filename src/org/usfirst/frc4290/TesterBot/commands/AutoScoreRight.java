@@ -25,11 +25,12 @@ public class AutoScoreRight extends CommandGroup {
         // a CommandGroup containing them would require both the chassis and the
         // arm.
     	addSequential(new AutoRaiseArm(), 1);
-    	addSequential(new MoveForward(0.0), 1.8);
+    	addSequential(new SlowLeftTurn(), 0.2);
+    	addSequential(new MoveForward(0.0), 1.5);
 //    	addSequential(new AutoRaiseArm(), 0.5);
-    	addSequential(new SlowLeftTurn(), 0.7);
+//    	addSequential(new SlowLeftTurn(), 0.6);
     	addParallel(new AutoLowerArm(), 10);
-    	addSequential(new MoveForward(0.0), 2);
+    	addSequential(new MoveForward(0.0), 3);
     	addSequential(new GrabBall(0.0), 5);
 
     }

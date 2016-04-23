@@ -109,9 +109,26 @@ public class DriveTrain extends Subsystem {
     }
     
     
-    public void driveForward(){
+    public void driveForward(double gyroAngle){
+    	double leftTurnMultiplier = 1;
+    	double rightTurnMultiplier = 1;
+    	
+    	// If angle-180 is positive drive forward to the right
+    	if (gyroAngle > 1) {
+    		rightTurnMultiplier = 0.5;
+    	} 
+    	// If angle-180 is negative drive forward to the left
+    	else if (gyroAngle < -1) {
+    		leftTurnMultiplier = 0.5;
+    	} 
+    	// If angle-180 is between 1 and -1 then drive straight
+    	else {
+    		leftTurnMultiplier = 1;
+    		rightTurnMultiplier = 1;
+    	}
+    	
     	SmartDashboard.putNumber("forward speed", speedMultiplier);
-    	robotDrive4.tankDrive(speedMultiplier, speedMultiplier);
+    	robotDrive4.tankDrive(leftTurnMultiplier * speedMultiplier, rightTurnMultiplier * speedMultiplier);
     }
     
     public void driveBackwards(){
@@ -140,10 +157,10 @@ public class DriveTrain extends Subsystem {
     	robotDrive4.arcadeDrive(Math.pow(right.getY(), powerCurve)*speedMultiplier*-1, right.getX()*-.85);//.arcadeDrive(right);
     }
     public void swingRight() {
-    	robotDrive4.tankDrive(1, 0);
+    	robotDrive4.tankDrive(0.85, 0.55);
     }
     public void swingLeft() {
-    	robotDrive4.tankDrive(0, 1);
+    	robotDrive4.tankDrive(0.55, 0.85);
     }
     public void moveForward(){
     	robotDrive4.tankDrive(0.7, 0.7);

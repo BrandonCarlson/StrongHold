@@ -25,10 +25,10 @@ public class AutoRamparts extends CommandGroup {
         // a CommandGroup containing them would require both the chassis and the
         // arm.
     	addParallel(new AutoRaiseArm(), 9);
-    	addSequential(new MoveForward(0), 1);
-    	addSequential(new SwingRightLeft(true), 3);
-    	addSequential(new SwingRightLeft(false), 3);
-    	addSequential(new MoveForward(0.0), 0.5);
-    	addSequential(new TurnAround());
+    	addSequential(new MoveForward(0), 1.5);
+    	addSequential(new SwingRightLeft(false), 1);
+//    	addSequential(new SwingRightLeft(true), 2);
+    	addSequential(new MoveForward(0.0), 1);
+    	addSequential(new AutoTwo());
     }
 }
