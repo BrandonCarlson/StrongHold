@@ -46,7 +46,7 @@ public class LowerClimber extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-//    	Robot.pneumatics.lowerClimber();
+    	Robot.pneumatics.lowerClimber();
     	Robot.jaguar.climbDown();
     	
     }
@@ -58,7 +58,7 @@ public class LowerClimber extends Command {
 
     // Called once after isFinished returns true
     protected void end() {
-//    	Robot.pneumatics.stopClimber();
+    	Robot.pneumatics.raiseClimber();
     	Robot.jaguar.climbStop();
     }
 

@@ -48,7 +48,7 @@ public class AutoChivalDeFrise extends CommandGroup {
     	addSequential(new MoveForward(0.0), 1);
     	addSequential(new AutoLowerArm(), 1);
     	addParallel(new AutoLowerArm(), 4);
-    	addSequential(new MoveBackward(0.0), 0.1);
+    	addSequential(new MoveBackward(0.0), 0.05);
     	addSequential(new AutoLowerArm(), 0.2);
     	addSequential(new MoveForward(0.0), 3.5);
     	addSequential(new AutoTwo());

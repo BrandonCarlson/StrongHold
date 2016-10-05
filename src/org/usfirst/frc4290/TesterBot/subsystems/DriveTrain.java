@@ -82,7 +82,7 @@ public class DriveTrain extends Subsystem {
     	
     }
     public void highSpeed(){
-    	speedMultiplier = 1;
+    	speedMultiplier = 0.65;
     	updateCurve();
     }
     public void midSpeed(){

@@ -5,9 +5,9 @@ import edu.wpi.first.wpilibj.command.CommandGroup;
 /**
  *
  */
-public class AutoScoreRight extends CommandGroup {
+public class ShootHigh extends CommandGroup {
     
-    public  AutoScoreRight() {
+    public  ShootHigh() {
         // Add Commands here:
         // e.g. addSequential(new Command1());
         //      addSequential(new Command2());
@@ -24,14 +24,10 @@ public class AutoScoreRight extends CommandGroup {
         // e.g. if Command1 requires chassis, and Command2 requires arm,
         // a CommandGroup containing them would require both the chassis and the
         // arm.
-    	addSequential(new AutoRaiseArm(), 1);
-    	addSequential(new SlowRightTurn(), 0.2);
-    	addSequential(new MoveForward(0.0), 1.5);
-//    	addSequential(new AutoRaiseArm(), 0.5);
-    	addSequential(new SlowLeftTurn(), 0.6);
-    	addParallel(new AutoLowerArm(), 10);
-    	addSequential(new MoveForward(0.0), 3);
-    	addSequential(new ThrowBall(0.0), 5);
-
+    	addParallel(new AutoRaiseArm(), 1);
+    	addSequential(new GrabBall(0.0), .5);
+    	addParallel(new LowerClimber(), 2);	
+    	addParallel(new AutoLowerArm(), 2);
+    	
     }
 }
